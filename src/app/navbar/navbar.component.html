@@ -1,0 +1,43 @@
+<header class="bg-white text-gray-800 p-4 shadow-md relative">
+  <div class="container mx-auto">
+    <nav class="flex items-center justify-between">
+       <!-- Hamburger Menu (mobilde görünecek) -->
+       <div class="md:hidden">
+        <button (click)="toggleMenu()" class="text-gray-800 focus:outline-none">
+          <i class="fas fa-bars fa-lg text-blue-400 hover:text-blue-800"></i> <!-- Font Awesome ikonu -->
+        </button>
+      </div>
+      <!-- Logo (mobilde ortalanacak) -->
+      <div class="flex-1 flex justify-center md:justify-start">
+        <img src="assets/mainlogo.png" alt="Logo" class="h-10">
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-6">
+        <a routerLink="/home" class="text-blue-400 hover:text-orange-500 font-medium">HOME</a>
+        <a routerLink="company/about-us" class="text-blue-400 hover:text-orange-500 font-medium">COMPANY</a>
+        <a routerLink="services/freight-forwarding" class="text-blue-400 hover:text-orange-500 font-medium">SERVICES</a>
+        <a routerLink="/booking" class="text-blue-400 hover:text-orange-500 font-medium">BOOKING</a>
+        <a routerLink="/mart" class="text-blue-400 hover:text-orange-500 font-medium">EUREKA MART</a>
+        <a routerLink="/contact" class="text-blue-400 hover:text-orange-500 font-medium">CONTACT</a>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div *ngIf="isMenuOpen" class="md:hidden mt-4 space-y-2">
+      <a routerLink="/home" class="block text-blue-400 hover:text-orange-500 font-medium">
+        <i class="fas fa-angle-double-right mr-2"></i> HOME</a>
+      <a routerLink="company/about-us" class="block text-blue-400 hover:text-orange-500 font-medium">
+        <i class="fas fa-angle-double-right mr-2"></i> COMPANY</a>
+      <a routerLink="services/freight-forwarding" class="block text-blue-400 hover:text-orange-500 font-medium">
+        <i class="fas fa-angle-double-right mr-2"></i> SERVICES</a>
+      <a routerLink="/booking" class="block text-blue-400 hover:text-orange-500 font-medium">
+        <i class="fas fa-angle-double-right mr-2"></i> BOOKING</a>
+        <a routerLink="/mart" class="block text-blue-400 hover:text-orange-500 font-medium">
+          <i class="fas fa-angle-double-right mr-2"></i> EUREKA MART</a>
+     
+      <a routerLink="/contact" class="block text-blue-400 hover:text-orange-500 font-medium">
+        <i class="fas fa-angle-double-right mr-2"></i> CONTACT</a>
+    </div>
+  </div>
+</header>

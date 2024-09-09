@@ -1,0 +1,35 @@
+/* Menü açık olduğunda buton solda kalır */
+.menu-open {
+    position: absolute;
+    left: 0;
+  }
+  
+  /* Menü butonu mobilde sol tarafta sabitlenir */
+  .md\\:hidden.menu-open {
+    left: 0;
+  }
+  
+  /* Sabitlenmiş menü */
+  .fixed {
+    left: -100%;
+  }
+  
+  /* Ekranın sağa kayması ve menü öğelerinin görünmesi */
+  .fixed.translate-x-0 {
+    transform: translateX(0);
+  }
+  
+  .fixed.translate-x-full {
+    transform: translateX(100%);
+  }
+  
+  /* Animasyon */
+  .transition-transform {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Logo ortalanır */
+  .flex-1 {
+    flex: 1;
+  }
+  

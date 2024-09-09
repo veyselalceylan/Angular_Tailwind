@@ -1,0 +1,73 @@
+<!-- Header Bölümü -->
+<div class="bg-gray-100 p-4 hidden md:flex md:items-center md:justify-between">
+   <div class="flex w-full justify-between flex-col md:flex-row md:space-x-4 w-full">
+     <!-- Telefon ve E-posta -->
+     <div class="flex items-center space-x-4">
+       <div class="flex items-center space-x-2">
+         <i class="fa fa-phone text-gray-600"></i>
+         <a href="tel:0399588703" class="text-gray-800">03 9958 8703</a>
+       </div>
+       <div class="flex items-center space-x-2">
+         <i class="fa fa-envelope-o text-gray-600"></i>
+         <a href="mailto:info@eurekalogistics.com.au" class="text-gray-800">info&#64;eurekalogistics.com.au</a>
+       </div>
+     </div>
+ 
+     <!-- Tracking / Request A Quote (Sağda) -->
+     <div class="flex items-center space-x-2 ml-auto">
+       <i class="fa fa-globe text-blue-600 text-xl"></i>
+       <span>
+         <a routerLink="/contact-us" class="text-blue-600 hover:underline">Request A Quote</a>
+       </span>
+     </div>
+   </div>
+ </div>
+ 
+ 
+ <div class="relative overflow-hidden w-full h-screen">
+   <div class="flex transition-transform duration-500 ease-in-out h-screen"
+        [ngStyle]="{'transform': 'translateX(-' + currentIndex * 100 + '%)'}"
+        (mousedown)="startDragging($event)"
+        (mousemove)="onDragging($event)"
+        (mouseup)="stopDragging()"
+        (mouseleave)="stopDragging()">
+     <!-- Slide 1 -->
+     <div class="flex-shrink-0 w-full h-screen flex items-center justify-center relative">
+       <img src="assets/slider/eureka-slider-1.jpg" class="w-full h-full object-cover" alt="Image 1">
+       <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40 text-white p-4">
+         <div class="text-center">
+           <span class="text-xl md:text-4xl font-semibold bg-blue-600 bg-opacity-50 px-4 md:px-6 py-2 rounded">Welcome to Eureka Logistics!</span>
+           <h2 class="text-lg md:text-2xl font-bold my-4">The Best Solution of Logistics</h2>
+           <a routerLink="/company/about-us" class="bg-transparent border border-white text-white py-2 px-4 rounded hover:bg-blue-800 hover:text-white-600 transition mt-5">About Us</a>
+         </div>
+       </div>
+     </div>
+     <!-- Slide 2 -->
+     <div class="flex-shrink-0 w-full h-screen flex items-center justify-center relative">
+       <img src="assets/slider/eureka-slider-2.jpg" class="w-full h-full object-cover" alt="Image 2">
+       <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40 text-white p-4">
+         <div class="text-center">
+           <span class="text-xl md:text-4xl font-semibold bg-blue-600 bg-opacity-50 px-4 md:px-6 py-2 rounded">Buy a Container</span>
+           <h2 class="text-lg md:text-2xl font-bold my-4">The Best Choice of Storage</h2>
+           <a routerLink="/booking" class="bg-transparent border border-white text-white py-2 px-4 rounded hover:bg-blue-800 hover:text-white-600 transition mt-5">Buy Now</a>
+         </div>
+       </div>
+     </div>
+     <!-- Slide 3 -->
+     <div class="flex-shrink-0 w-full h-screen flex items-center justify-center relative">
+       <img src="assets/slider/eureka-slider-3.jpg" class="w-full h-full object-cover" alt="Image 3">
+       <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40 text-white p-4">
+         <div class="text-center">
+           <span class="text-xl md:text-4xl font-semibold bg-blue-600 bg-opacity-50 px-4 md:px-6 py-2 rounded">Book For Garage</span>
+           <h2 class="text-lg md:text-2xl font-bold my-4">The Best Solution of Logistics</h2>
+           <a routerLink="/mart" class="bg-transparent border border-white text-white py-2 px-4 rounded hover:bg-blue-800 hover:text-white-600 transition mt-5">Book Now</a>
+         </div>
+       </div>
+     </div>
+   </div>
+   <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-blue-600 bg-opacity-50 text-white p-2 rounded-full"
+           (click)="prevSlide()">&#10094;</button>
+   <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-blue-600 bg-opacity-50 text-white p-2 rounded-full"
+           (click)="nextSlide()">&#10095;</button>
+ </div>
+ 

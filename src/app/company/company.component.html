@@ -1,0 +1,41 @@
+<div class="flex flex-wrap items-center justify-center">
+    <!-- Üst kısım (Mobilde görünmeyecek) -->
+    <div class="flex flex-wrap items-center justify-center min-h-[30vh] w-full mb-[50px] hidden md:flex">
+        <img src="assets/slider/eureka-slider-1.jpg" class="object-cover object-center w-full h-[30vh]" />
+    </div>
+</div>
+<div class="bg-gray-100 p-8">
+    <div class="container mx-auto">
+        <div class="flex flex-wrap -mx-4">
+            <!-- Sol Taraf: Menü -->
+            <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0 flex-shrink-0">
+                <div class="bg-white rounded-lg shadow-lg p-4">
+                    <ul class="space-y-4">
+                        <li class="text-gray-700">
+                            <a routerLink="about-us" class="flex items-center text-blue-400 hover:text-blue-800">
+                                <i class="fas fa-angle-double-right mr-2"></i> About Us
+                            </a>
+                        </li>
+                        <li class="text-gray-700">
+                            <a routerLink="mission-vision" class="flex items-center text-blue-400 hover:text-blue-800">
+                                <i class="fas fa-angle-double-right mr-2"></i> Mission Vision
+                            </a>
+                        </li>
+                        <li class="text-gray-700">
+                            <a routerLink="why-choose-us" class="flex items-center text-blue-400 hover:text-blue-800">
+                                <i class="fas fa-angle-double-right mr-2"></i> Why Choose Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sağ Taraf: İçerik -->
+            <div class="w-full md:w-3/4 px-4">
+                <div class="bg-white rounded-lg shadow-lg">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
