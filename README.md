@@ -11,7 +11,6 @@ To install the dependencies and run the project locally, follow these steps:
 ```bash
 git clone https://github.com/veyselalceylan/Angular_Tailwind.git
 
-
 ## 2. Navigate to the Project Directory
 
 ```bash
