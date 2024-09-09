@@ -37,3 +37,6 @@ ng serve
 
 #### 2. Open the Application
 Open your web browser and navigate to http://localhost:4200/ to view the application in action.
+
+#### For the content of the booking and marketing pages in the project, you can take a look at my other content.
+
